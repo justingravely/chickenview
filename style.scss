@@ -1,0 +1,332 @@
+
+
+
+@font-face {
+    font-family: belwe;
+    src: url(BelweMediumBT.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    --darkBackground: rgb(26, 26, 26);
+    --darkTextBold: white;
+    --darkText: rgba(255, 255, 255, 0.8);
+    --darkNavTopBg: rgb(70, 70, 70);
+
+    --specialColor: rgb(146, 237, 253);
+}
+
+body {
+    background-color: #212121;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='100' y1='33' x2='100' y2='-3'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='100' y1='135' x2='100' y2='97'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%231d1d1d' fill-opacity='0.6'%3E%3Crect x='100' width='100' height='100'/%3E%3Crect y='100' width='100' height='100'/%3E%3C/g%3E%3Cg fill-opacity='0.5'%3E%3Cpolygon fill='url(%23a)' points='100 30 0 0 200 0'/%3E%3Cpolygon fill='url(%23b)' points='100 100 0 130 0 100 200 100 200 130'/%3E%3C/g%3E%3C/svg%3E");
+    overflow-x: hidden;
+    color: var(--darkText);
+    font-family: belwe;
+    display: flex;
+}
+
+a {
+    color: var(--darkText);
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+h2 {
+    color: var(--darkTextBold);
+}
+h3 {
+    color: var(--darkTextBold);
+}
+
+.specialColor {
+    color: var(--specialColor);
+}
+
+#topNav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5.5rem;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(26, 26, 26);
+    z-index: 7;
+    .topNavDivider {
+        height: 2rem;
+        width: 100%;
+        border-top: 1px solid grey;
+        border-bottom: 1px solid grey;
+        background-color: var(--darkNavTopBg);
+        margin: auto auto 0 auto;
+    }
+    .topNavTop {
+        display: flex;
+        margin: auto;
+        width: 100%;
+        #themeButton {
+            cursor: pointer;
+            margin: 0.5rem 2rem auto auto;
+            font-size: 1.75rem;
+        }
+        #themeButton:hover {
+            color: var(--specialColor);
+        }
+    }
+}
+#websiteTitle {
+    padding-top: 0.5rem;
+    margin: auto auto auto 15rem;
+}
+
+nav {
+    margin-top: 5.5rem;
+    padding-top: 3rem;
+    width: 20rem;
+    font-size: 1.25rem;
+    position: fixed;
+    left: 14rem;
+    top: 0;
+    ul {
+        list-style: none;
+        padding: 0;
+        li {
+           margin: 1rem auto 1rem 1rem;
+        }
+        li:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    };
+    div {
+        margin-left: 1rem;
+    }
+}
+.mobileMenu {
+    display: none;
+}
+
+#main {
+    margin-top: 5.5rem;
+    margin-right: 0;
+    margin-left: auto;
+    width: 65%;
+    font-size: 1rem;
+}
+
+.yes {
+    color: greenyellow;
+}
+.no {
+    color: red;
+}
+.maybe {
+    color: yellow
+}
+.maybeBrief {
+    margin-left: 4px;
+}
+
+
+section {
+    width: 35.6rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-left: 1px solid var(--darkNavTopBg);
+    border-right: 1px solid var(--darkNavTopBg);
+    display: flex;
+    flex-direction: column;
+    p {
+        margin-top: 1rem;
+    }
+    .sectionTitle {
+        margin: auto auto 0 auto;
+    }
+    padding: 2rem;
+    .sectionList {
+        border: 1px solid var(--darkText);
+        // padding: 1rem;
+        margin-top: 1rem;
+        background-position: center;
+        background-size: cover;
+        p {
+            margin-top: 1rem;
+        }
+    }
+    ul, ol {
+        padding-left: 1rem;
+        li {
+            padding: 0.22rem;
+        };
+    }
+    a {
+        text-decoration: underline;
+    }
+    a:hover {
+        color: var(--specialColor);
+    }
+
+    .sectionListWrap {
+        padding: 1rem;
+        background-color: rgba(0, 0, 0, 0.85);
+    }
+    .warrior {
+        background-position-y: -50px;
+        background-image: url(https://wiki.guildwars2.com/images/thumb/4/47/Spec_image_Spellbreaker.jpg/440px-Spec_image_Spellbreaker.jpg);
+    }
+    .guardian {
+        background-image: url(https://wiki.guildwars2.com/images/thumb/e/ef/Spec_image_Firebrand.jpg/370px-Spec_image_Firebrand.jpg);
+    }
+    .revenant {
+        background-position-y: -110px;
+        background-image: url(https://wiki.guildwars2.com/images/thumb/0/06/Spec_image_Herald.jpg/325px-Spec_image_Herald.jpg);
+    }
+    .ranger {
+        background-image: url(https://wiki.guildwars2.com/images/thumb/f/fd/Spec_image_Soulbeast.jpg/520px-Spec_image_Soulbeast.jpg);
+    }
+    .thief {
+        background-image: url(https://wiki.guildwars2.com/images/thumb/e/e8/Spec_image_Daredevil.jpg/425px-Spec_image_Daredevil.jpg);
+    }
+    .engineer {
+        background-image: url(https://wiki.guildwars2.com/images/thumb/5/5e/Spec_image_Scrapper.jpg/500px-Spec_image_Scrapper.jpg);
+    }
+    .elementalist {
+        background-image: url(https://wiki.guildwars2.com/images/thumb/b/b2/Spec_image_Weaver.jpg/400px-Spec_image_Weaver.jpg);
+    }
+    .necromancer {
+        background-image: url(https://wiki.guildwars2.com/images/thumb/a/ae/Harbinger_concept_art_2.jpg/350px-Harbinger_concept_art_2.jpg);
+    }
+    .mesmer {
+        background-image: url(https://wiki.guildwars2.com/images/thumb/4/48/Spec_image_Mirage.jpg/350px-Spec_image_Mirage.jpg);
+    }
+    .dps {
+        background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7469f0e6-532d-45c5-af78-120be36b4762/d3f3avz-bba4545a-6e66-49d6-9cd2-d38693258127.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzc0NjlmMGU2LTUzMmQtNDVjNS1hZjc4LTEyMGJlMzZiNDc2MlwvZDNmM2F2ei1iYmE0NTQ1YS02ZTY2LTQ5ZDYtOWNkMi1kMzg2OTMyNTgxMjcuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.z1GznPx1f3JaGQBbNdJ69S9jOfZaRaDSkwyp4-qnEnY);
+    }
+    .supportDps {
+        background-image: url(https://64.media.tumblr.com/tumblr_m3vw0l0cvy1rtdsh3o1_1280.jpg);
+    }
+    .healer {
+        background-image: url(https://i.pinimg.com/736x/2a/47/ea/2a47ea76ad04f85809661e5fbc484172.jpg);
+    }
+    .teamComp {
+        background-image: url(https://wiki.guildwars2.com/images/thumb/9/92/Professions_reveal_12_%28highlighted%29.jpg/1200px-Professions_reveal_12_%28highlighted%29.jpg);
+    }
+    .gear {
+        background-image: url(https://d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/2022/08/14c65Anniversary_screenshot_Dsm.jpg);
+    }
+    .masteries {
+        background-image: url(https://wiki.guildwars2.com/images/e/e6/Mastery_interface.jpg);
+    }
+    .raids {
+        background-position-y: -30px;
+        background-image: url(https://assets.snowcrows.com/images/guides/raids/deimos/daddy%20deimos%20pic.jpg);
+    }
+    .strikes {
+        background-image: url(https://wiki.guildwars2.com/images/thumb/c/ce/The_Only_One_loading_screen.png/1200px-The_Only_One_loading_screen.png);
+    }
+    .wvW {
+        background-image: url(https://preview.redd.it/9nhg9get4n981.jpg?width=2560&format=pjpg&auto=webp&s=04a1612bda60c39d749118b33be682ec7475c789);
+    }
+    .fractals {
+        background-image: url(https://d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/2020/09/6fc04Sunqua-Peak.jpg);
+    }
+    .daily {
+        background-image: url(https://wiki.guildwars2.com/images/4/48/The_First_City_loading_screen.jpg);
+    }
+    .weekly {
+        background-image: url(https://i.pinimg.com/736x/88/e6/58/88e6586570cc499d168b9f18202105b1--environment-concept-environment-design.jpg);
+    }
+    .constant {
+        background-image: url(https://external-preview.redd.it/e6-gB6Q3DaxdSOdBzH1covSliYT1MbI1soqVIx1c_RU.jpg?auto=webp&s=5f4550c575c7a26bff82aca3fa43a3dcd228be40);
+    }
+    .inventory {
+        background-position-y: -130px;
+        background-image: url(https://wiki.guildwars2.com/images/f/f0/Ornate_Leatherworker%27s_Backpack.jpg);
+    }
+    .pickOne {
+        background-position-y: 0;
+        background-image: url(https://pbs.twimg.com/media/DFruTi5XkAEZrk8.jpg);
+    }
+    .overwhelmed {
+        background-image: url(https://www.gamespace.com/wp-content/uploads/2022/07/lord-faren-fancy-panties-1024x575.jpg);
+    }
+}
+.topNavDivider {
+    display: flex;
+    .mobileMenu {
+        margin: auto auto auto 1rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+}
+
+//desktop
+@media (max-width: 1375px) {
+    nav {
+       left: 0;
+    }
+    #websiteTitle {
+        margin: auto auto auto 1.15rem;
+    }
+}
+
+//tablet
+@media (max-width: 909px) {
+    .mobileMenu {
+        display: flex;
+    }
+    #main {
+        margin: auto;
+        margin-top: 5.5rem;
+        width: 70%;
+        font-size: 1rem;
+    }
+    section {
+        width: 100%;
+    }
+    nav {
+        left: -20rem;
+        background-color: rgba(0, 0, 0, 0.95);
+        border-right: 1px solid var(--darkNavTopBg)
+    }
+}
+
+.navAppearClass {
+    animation: navAppear;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.navDissapearClass {
+    animation: navDissapear;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes navAppear {
+    0% {
+        left: -20rem;
+    } 100% {
+        left: 0;
+    }
+}
+@keyframes navDissapear {
+    0% {
+        left: 0;
+    } 100% {
+        left: -20rem;
+    }
+}
+
+//mobile
+@media (max-width: 650px) {
+    #main {
+        width: 100%;
+    }
+    
+}
+
+
+
