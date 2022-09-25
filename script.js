@@ -1,18 +1,18 @@
 var navTopic = document.getElementsByClassName("navTopic");
 var body = document.querySelector("body");
-var scrollArr = [13.25, 799.5, 1347, 2258.5, 3039.5, 3419.5, 4408.25, 4799, 5192.5]
+var scrollArr = [0, 601, 1342, 2008, 2384, 3222, 6921, 7023]
 var mobileMenu = document.getElementsByClassName("mobileMenu")[0];
 var navTog = false;
-// for (let i = 0; i < 8; i+= 2) {
-
-//     document.querySelectorAll("section")[i].style.backgroundColor = "rgba(26, 26, 26, 0.5)";
-// }
 
 for (let i = 0; i < navTopic.length; i++) {
     navTopic[i].addEventListener("click", ()=>{
             window.scrollTo(0, scrollArr[i]);
     })
 }
+
+// window.addEventListener("scroll", ()=>{
+//     console.log(window.scrollY);
+// })
 
 mobileMenu.addEventListener("click", ()=>{
     switch(navTog) {
