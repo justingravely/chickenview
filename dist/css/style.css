@@ -89,6 +89,7 @@ nav {
   position: fixed;
   left: 14rem;
   top: 0;
+  height: 100vh;
 }
 nav ul {
   list-style: none;
