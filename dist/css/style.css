@@ -8,7 +8,7 @@
   box-sizing: border-box;
   --darkBackground: rgb(26, 26, 26);
   --darkTextBold: white;
-  --darkText: rgba(255, 255, 255, 0.8);
+  --darkText: rgba(255, 255, 255, 0.85);
   --darkNavTopBg: rgb(70, 70, 70);
   --specialColor: rgb(146, 237, 253);
 }
@@ -172,7 +172,7 @@ section a:hover {
 }
 section .sectionListWrap {
   padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(0, 0, 0, 0.65);
 }
 section .warrior {
   background-position-y: -50px;
