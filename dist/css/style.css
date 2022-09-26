@@ -264,6 +264,27 @@ section .overwhelmed {
   cursor: pointer;
 }
 
+.pcVidSection {
+  flex-direction: column;
+  margin-top: 4rem;
+  padding-top: 3rem;
+  position: absolute;
+  right: 3.5rem;
+  top: 0;
+  display: none;
+}
+.pcVidSection h2 {
+  margin: 1rem auto auto auto;
+}
+.pcVidSection iframe {
+  margin: 1rem auto;
+}
+
+@media (min-width: 1830px) {
+  .pcVidSection {
+    display: flex;
+  }
+}
 @media (max-width: 1375px) {
   nav {
     left: 0;
@@ -273,6 +294,9 @@ section .overwhelmed {
   }
 }
 @media (max-width: 909px) {
+  .pcVidSection {
+    display: none;
+  }
   .mobileMenu {
     display: flex;
   }
@@ -343,6 +367,9 @@ section .overwhelmed {
   }
 }
 @media (max-width: 650px) {
+  .pcVidSection {
+    display: none;
+  }
   #main {
     width: 100%;
   }
